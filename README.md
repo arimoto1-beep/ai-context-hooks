@@ -96,7 +96,8 @@ ai-context-hooks/
 
 ## サンプルを見る
 
-- 原文ログ例：[examples/raw/2026-06-14_meeting.md](examples/raw/2026-06-14_meeting.md)
+- 原文ログ例（1議題）：[examples/raw/2026-06-14_meeting.md](examples/raw/2026-06-14_meeting.md)
+- 原文ログ例（複数議題）：[examples/raw/2026-06-15_multi_topic_meeting.md](examples/raw/2026-06-15_multi_topic_meeting.md)
 - 索引メモ例：[examples/hooks/ctx-20260614-001.md](examples/hooks/ctx-20260614-001.md)
 - 索引メモ一覧例：[examples/hooks/index.md](examples/hooks/index.md)
 - 詳しい解説：[docs/examples.md](docs/examples.md)
