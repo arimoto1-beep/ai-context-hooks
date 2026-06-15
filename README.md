@@ -62,11 +62,12 @@ ai-context-hooks/
 │  ├─ create_context_hook.md     索引メモを作成するプロンプト
 │  ├─ review_context_hook.md     索引メモをレビューするプロンプト
 │  └─ use_context_hook.md        索引メモを使って確認するプロンプト
-└─ templates/
-   ├─ context_hook_template.md   索引メモのMarkdownテンプレート
-   └─ context_hook_template.yaml 索引メモのYAMLテンプレート
+├─ templates/
+│  ├─ context_hook_template.md   索引メモのMarkdownテンプレート
+│  └─ context_hook_template.yaml 索引メモのYAMLテンプレート
+└─ tools/
+   └─ validate_hooks.py          索引メモの簡易バリデーター
 ```
-
 ---
 
 ## 最初の使い方
@@ -122,3 +123,15 @@ ai-context-hooks/
 - [docs/concept.md](docs/concept.md) — なぜこのアプローチか
 - [docs/index_memo_format.md](docs/index_memo_format.md) — 索引メモの書き方
 - [docs/examples.md](docs/examples.md) — 具体例と使い方
+
+---
+
+## 索引メモの簡易チェック
+
+`tools/validate_hooks.py` で、Markdown の索引メモに最低限必要な項目があるか確認できます。
+
+```bash
+python tools/validate_hooks.py examples/hooks/ctx-20260614-001.md
+```
+
+このバリデーターは項目の有無と confidence の値を簡易チェックするものです。内容の正しさ、安全性、機密情報の不在、AIによる誤用防止、仕様判断への利用可否は保証しません。
