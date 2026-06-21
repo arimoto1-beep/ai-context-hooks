@@ -4,7 +4,7 @@
 
 | id | topic | labels | confidence | source | hook |
 |---|---|---|---|---|---|
-| ctx-20260614-001 | CSV出力機能の扱い | out_of_scope, future_revisit, concern_seed, not_decision | medium | examples/raw/2026-06-14_meeting.md 00:12:01-00:13:30 | [examples/hooks/ctx-20260614-001.md](ctx-20260614-001.md) |
+| ctx-20260614-001 | CSV出力機能の扱い | out_of_scope, future_revisit, concern_seed, not_decision | low | examples/raw/2026-06-14_meeting.md 00:12:01-00:13:30 | [examples/hooks/ctx-20260614-001.md](ctx-20260614-001.md) |
 | ctx-20260615-001 | CSV出力機能の扱いと設計懸念 | out_of_scope, future_revisit, concern, not_decision | low | examples/raw/2026-06-15_multi_topic_meeting.md 00:03:10-00:06:20, 00:28:40-00:31:10 | [examples/hooks/ctx-20260615-001_csv_output.md](ctx-20260615-001_csv_output.md) |
 | ctx-20260615-002 | エラー処理方針と設計書への反映事項 | open_issue, needs_follow_up, not_decision | medium | examples/raw/2026-06-15_multi_topic_meeting.md 00:10:30-00:18:44 | [examples/hooks/ctx-20260615-002_error_handling.md](ctx-20260615-002_error_handling.md) |
 | ctx-20260615-003 | スケジュール遅延の可能性と確認事項 | schedule_risk, concern, task_candidate, not_decision | low | examples/raw/2026-06-15_multi_topic_meeting.md 00:18:45-00:23:29 | [examples/hooks/ctx-20260615-003_schedule_risk.md](ctx-20260615-003_schedule_risk.md) |

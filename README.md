@@ -136,3 +136,17 @@ python tools/validate_hooks.py examples/hooks/ctx-20260614-001.md
 ```
 
 このバリデーターは項目の有無と confidence の値を簡易チェックするものです。内容の正しさ、安全性、機密情報の不在、AIによる誤用防止、仕様判断への利用可否は保証しません。
+
+---
+
+## index と hook の整合性チェック
+
+`tools/validate_index.py` で、`examples/hooks/index.md` と各 hook ファイルの対応関係を簡易チェックできます。
+
+```bash
+python tools/validate_index.py examples/hooks/index.md examples/hooks
+```
+
+チェック内容：index に書かれた hook ファイルの存在、hook ファイルが index に載っているか、id / topic / labels / confidence の一致。
+
+内容の正しさ、原文の妥当性、AIによる誤用防止は保証しません。
