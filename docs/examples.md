@@ -161,6 +161,30 @@ python tools/validate_index.py examples/hooks/index.md examples/hooks
 
 ---
 
+## source から原文への道のり確認
+
+context hook は、原文へ戻るための入口です。
+
+`source.file` が存在しない、`source.ranges` が空、`start > end` など、source の記述が壊れていると、hook はただのメモになってしまい、原文に戻ることができなくなります。
+
+`tools/validate_source.py` を使うと、hook に書かれた source から原文ファイルへ最低限戻れることを確認できます。
+
+```bash
+python tools/validate_source.py examples/hooks examples/raw
+```
+
+チェック内容：
+
+- hook に `source.file` があること
+- `source.file` が指す原文ファイルが `raw` ディレクトリ配下に存在すること
+- hook に `source.ranges` が1件以上あること
+- 各 range に `start` と `end` があること（時刻形式 `HH:MM:SS`）
+- `start <= end` になっていること
+
+ただし、このツールが確認するのは「道がつながっているか」であって、「原文解釈が正しいか」ではありません。`source.ranges` の時刻が実際に該当発言を指しているかどうか、hook_note の記述が原文と意味的に一致しているかどうかは、このツールでは確認できません。必ず原文を読んで判断してください。
+
+---
+
 ## レビュー時に確認する観点
 
 `prompts/review_context_hook.md` に詳細なレビュー観点があります。

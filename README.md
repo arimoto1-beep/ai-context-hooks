@@ -150,3 +150,23 @@ python tools/validate_index.py examples/hooks/index.md examples/hooks
 チェック内容：index に書かれた hook ファイルの存在、hook ファイルが index に載っているか、id / topic / labels / confidence の一致。
 
 内容の正しさ、原文の妥当性、AIによる誤用防止は保証しません。
+
+---
+
+## source から原文への道のり確認
+
+`tools/validate_source.py` で、各 hook に書かれた `source.file` と `source.ranges` が最低限つながっているかを確認できます。
+
+```bash
+python tools/validate_source.py examples/hooks examples/raw
+```
+
+チェック内容：
+
+- hook に `source.file` があること
+- `source.file` が指す原文ファイルが `raw` ディレクトリ配下に存在すること
+- hook に `source.ranges` が1件以上あること
+- 各 range に `start` と `end` があること
+- `start <= end` になっていること（時刻形式 `HH:MM:SS`）
+
+このツールは「原文へ戻る道が最低限つながっているか」を確認するものです。原文の内容と hook_note が意味的に一致しているか、source.ranges の範囲が本当に適切かは保証しません。
